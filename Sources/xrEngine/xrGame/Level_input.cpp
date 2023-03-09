@@ -23,6 +23,8 @@
 #include "clsid_game.h"
 #include "../xr_input.h"
 #include "saved_game_wrapper.h"
+#include "actorcondition.h"
+#include "actor_flags.h"
 
 #ifdef DEBUG
 #	include "ai/monsters/BaseMonster/base_monster.h"
@@ -148,7 +150,12 @@ void CLevel::IR_OnKeyboardPress	(int key)
 
 	if(_curr == kQUICK_SAVE && IsGameTypeSingle())
 	{
-		Console->Execute			("save");
+		if (!psActorFlags.test(AF_CANSAVE))
+		{
+			Console->Execute("save");
+			return;
+		}
+		//Console->Execute			("save");
 		return;
 	}
 	if(_curr == kQUICK_LOAD && IsGameTypeSingle())
