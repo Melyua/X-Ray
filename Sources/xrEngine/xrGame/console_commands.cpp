@@ -1482,9 +1482,8 @@ void CCC_RegisterCommands()
 	CMD1(CCC_ShowAnimationStats,"ai_show_animation_stats");
 #endif // DEBUG
 	
-	CMD3(CCC_Mask,				"ai_ignore_actor",		&psAI_Flags,	aiIgnoreActor);
-
 #ifndef MASTER_GOLD
+	CMD3(CCC_Mask,				"ai_ignore_actor",		&psAI_Flags,	aiIgnoreActor);
 #endif // MASTER_GOLD
 
 	// Physics
@@ -1501,14 +1500,13 @@ void CCC_RegisterCommands()
 #endif // DEBUG
 
 
+#ifndef MASTER_GOLD
+	CMD1(CCC_JumpToLevel,	"jump_to_level"		);
 	CMD3(CCC_Mask,			"g_god",			&psActorFlags,	AF_GODMODE	);
 	CMD3(CCC_Mask,			"g_unlimitedammo",	&psActorFlags,	AF_UNLIMITEDAMMO);
-	CMD1(CCC_JumpToLevel,	"jump_to_level"		);
-	CMD1(CCC_TimeFactor,	"time_factor");		
-
-#ifndef MASTER_GOLD
 	CMD1(CCC_Script,		"run_script");
 	CMD1(CCC_ScriptCommand,	"run_string");
+	CMD1(CCC_TimeFactor,	"time_factor");		
 #endif // MASTER_GOLD
 
 	CMD3(CCC_Mask,		"g_autopickup",			&psActorFlags,	AF_AUTOPICKUP);
