@@ -612,7 +612,7 @@ void CUIBuyWnd::SetCurrentItem(CUICellItem* itm)
 	{
 		string256					str;
 		m_itemInfo.InitItem			(CurrentIItem());
-		sprintf_s						(str, "%d RU", m_bag.GetItemPrice(itm));
+		sprintf_s						(str, "%d UAH", m_bag.GetItemPrice(itm));
 		m_itemInfo.UICost->SetText	(str);
 
 		string64					tex_name;
