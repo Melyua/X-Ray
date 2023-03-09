@@ -20,6 +20,7 @@
 #define MAX_SATIETY					1.0f
 #define START_SATIETY				0.5f
 
+
 BOOL	GodMode	()	
 { 
 	if (GameID() == GAME_SINGLE) 
