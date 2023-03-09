@@ -273,7 +273,7 @@ void CUIInventoryWnd::Update()
 		}
 		// update money
 		string64						sMoney;
-		sprintf_s							(sMoney,"%d RU", _money);
+		sprintf_s							(sMoney,"%d UAH", _money);
 		UIMoneyWnd.SetText				(sMoney);
 
 		// update outfit parameters
