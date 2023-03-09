@@ -1501,15 +1501,17 @@ void CCC_RegisterCommands()
 
 
 #ifndef MASTER_GOLD
-	CMD1(CCC_JumpToLevel,	"jump_to_level"		);
 	CMD3(CCC_Mask,			"g_god",			&psActorFlags,	AF_GODMODE	);
 	CMD3(CCC_Mask,			"g_unlimitedammo",	&psActorFlags,	AF_UNLIMITEDAMMO);
+
+	CMD1(CCC_JumpToLevel,	"jump_to_level"		);
 	CMD1(CCC_Script,		"run_script");
 	CMD1(CCC_ScriptCommand,	"run_string");
 	CMD1(CCC_TimeFactor,	"time_factor");		
 #endif // MASTER_GOLD
 
 	CMD3(CCC_Mask,		"g_autopickup",			&psActorFlags,	AF_AUTOPICKUP);
+	CMD3(CCC_Mask,		"g_can_save",			&psActorFlags,	AF_CANSAVE);
 
 
 #ifdef DEBUG
